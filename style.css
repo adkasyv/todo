@@ -22,9 +22,11 @@ input {
 /*Как будет выглядеть каждый элемент нашего списка*/
 .tdItem {
   text-align: left;
+  margin: 10px;
   padding: 10px;
   cursor: default;
   border-radius: 7px;
+  background-color: #d1dfd7;
 }
 /*Что произойдёт, когда мы наведём курсор на любую задачу из списка*/
 .tdItem:hover {

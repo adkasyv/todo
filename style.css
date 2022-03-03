@@ -32,4 +32,22 @@ input {
 .tdItem:hover {
   background-color: lightblue;
 }
-/*Закончили со стилями*/
+
+/* *Возможность сортировки задач посредством перетаскивания (drag и drop) */
+.container_1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.box {
+  border: 3px solid #666;
+  background-color: #ddd;
+  border-radius: 0.5em;
+  padding: 10px;
+  cursor: move;
+}
+
+.box.over {
+  border: 3px dotted #666;
+}

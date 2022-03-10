@@ -56,6 +56,7 @@ $('#tdlApp input').on('keydown', function (e) {
     // и добавляем её в конец списка
     $('<li></li>').addClass('tdItem')
       .attr('data-itemid', Mask + number_Id)
+      .attr('draggable', 'true')
       .text(str).appendTo(List);
   }
 });
@@ -71,9 +72,7 @@ $(document).on('click', '.tdItem', function (e) {
 })
 
 
-// Возможность сортировки задач посредством перетаскивания (drag и drop).
-
-
+// *Возможность сортировки задач посредством перетаскивания (drag и drop).
 document.addEventListener('DOMContentLoaded', (event) => {
 
   function handleDragStart(e) {
@@ -120,17 +119,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
 
-  let items = document.querySelectorAll('.container_1 .box');
-  items.forEach(function (item) {
-    item.addEventListener('dragstart', handleDragStart);
-    item.addEventListener('dragover', handleDragOver);
-    item.addEventListener('dragenter', handleDragEnter);
-    item.addEventListener('dragleave', handleDragLeave);
-    item.addEventListener('dragend', handleDragEnd);
-    item.addEventListener('drop', handleDrop);
-  });
-
-  // let items = document.querySelectorAll('.tdlDiv .tdItem');
+  // let items = document.querySelectorAll('.container_1 .box');
   // items.forEach(function (item) {
   //   item.addEventListener('dragstart', handleDragStart);
   //   item.addEventListener('dragover', handleDragOver);
@@ -139,5 +128,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
   //   item.addEventListener('dragend', handleDragEnd);
   //   item.addEventListener('drop', handleDrop);
   // });
+
+  let items = document.querySelectorAll('.container_2 .tdItem');
+  items.forEach(function (item) {
+    item.addEventListener('dragstart', handleDragStart);
+    item.addEventListener('dragover', handleDragOver);
+    item.addEventListener('dragenter', handleDragEnter);
+    item.addEventListener('dragleave', handleDragLeave);
+    item.addEventListener('dragend', handleDragEnd);
+    item.addEventListener('drop', handleDrop);
+  });
 
 });

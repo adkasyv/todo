@@ -42,20 +42,22 @@ input {
 
 .draggable {
   will-change: transform;
-  &:after {
-    content: "drag me";
-    right: 7px;
-    font-size: 10px;
-    position: absolute;
-    cursor: pointer;
-    line-height: 5;
-    transition: all 200ms;
-    transition-timing-function: cubic-bezier(0.48, 0.72, 0.62, 1.5);
-    transform: translateX(120%);
-    opacity: 0;
-  }
 }
 
+/* ! не работает плавная анимация */
+.draggable:after {
+  content: "drag me";
+  right: 7px;
+  font-size: 10px;
+  position: absolute;
+  cursor: pointer;
+  line-height: 5;
+  transition: all 200ms;
+  transition-timing-function: cubic-bezier(0.48, 0.72, 0.62, 1.5);
+  transform: translateX(120%);
+  opacity: 0;
+}
+/* 
 .box {
   border: 3px solid #666;
   background-color: #ddd;
@@ -65,17 +67,27 @@ input {
 }
 
 .box.over {
-  border: 3px dotted #666;
+  border: 3px dotted rgb(0, 255, 13);
+  background-color: aqua;
+  opacity: "0.4";
+
+  transform: scale(1.1, 1.1);
+} */
+
+.tdItem {
+  border: 3px solid #666;
+  background-color: #ddd;
+  border-radius: 0.5em;
+  padding: 10px;
+  cursor: move;
+
+  /* user-select: none; */
+}
+
+.tdItem.over {
+  border: 3px dotted rgb(0, 255, 13);
   background-color: aqua;
   opacity: "0.4";
 
   transform: scale(1.1, 1.1);
 }
-
-/* .box.over:after {
-  padding: 20px;
-} */
-
-/* .box:focus {
-  background-color: #2e9aff;
-} */

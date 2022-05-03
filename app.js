@@ -119,17 +119,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
 
-  // let items = document.querySelectorAll('.container_1 .box');
-  // items.forEach(function (item) {
-  //   item.addEventListener('dragstart', handleDragStart);
-  //   item.addEventListener('dragover', handleDragOver);
-  //   item.addEventListener('dragenter', handleDragEnter);
-  //   item.addEventListener('dragleave', handleDragLeave);
-  //   item.addEventListener('dragend', handleDragEnd);
-  //   item.addEventListener('drop', handleDrop);
-  // });
-
-  let items = document.querySelectorAll('.container_2 .tdItem');
+  let items = document.querySelectorAll('.container_1 .box');
   items.forEach(function (item) {
     item.addEventListener('dragstart', handleDragStart);
     item.addEventListener('dragover', handleDragOver);
@@ -138,5 +128,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
     item.addEventListener('dragend', handleDragEnd);
     item.addEventListener('drop', handleDrop);
   });
+
+  // let items = document.querySelectorAll('.container_2 .tdItem');
+  // items.forEach(function (item) {
+  //   item.addEventListener('dragstart', handleDragStart);
+  //   item.addEventListener('dragover', handleDragOver);
+  //   item.addEventListener('dragenter', handleDragEnter);
+  //   item.addEventListener('dragleave', handleDragLeave);
+  //   item.addEventListener('dragend', handleDragEnd);
+  //   item.addEventListener('drop', handleDrop);
+  // });
 
 });

@@ -80,7 +80,7 @@ input {
   background-color: #ddd;
   border-radius: 0.5em;
   padding: 10px;
-  cursor: move;
+  cursor: move; 
 }
 
 .tdItem.over {
